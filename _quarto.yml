@@ -16,7 +16,7 @@ website:
 format:
   html:
     theme:
-      light: flatly
+      light: litera
       dark: darkly
     css: styles.css
 
