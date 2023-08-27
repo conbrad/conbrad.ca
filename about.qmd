@@ -17,29 +17,29 @@ Conor Brady is a software engineer currently working on predicting wildfire beha
 
 ## Experience
 
-##### BC Wildfire - Predictive Services Unit
+##### [BC Wildfire - Predictive Services Unit](https://www2.gov.bc.ca/gov/content/safety/wildfire-status)
 Full Stack Developer | March 2021 - present
 
-##### Bump
+##### [Bump](https://www.bumpapp.xyz)
 Senior Software Engineer | December 2022 - present
 
-##### Spare Labs
+##### [Spare Labs](https://sparelabs.com)
 Software Engineer | August 2019 - July 2020
 
-##### RightMesh
+##### [RightMesh](https://rightmesh.io)
 Software Engineer | September 2018 - August 2019
 
-##### Scout24
+##### [Scout24](https://www.scout24.com)
 Software Engineer | September 2017 - August 2018
 
-##### Visier
+##### [Visier](https://www.visier.com)
 Software Developer | August 2016 - April 2017
 
 ## Education
 
-##### Simon Fraser University 
-Bsc in Computing Science | Sept 2012 - June 2016
+##### [Simon Fraser University](https://www.sfu.ca) 
+[BSc in Computing Science](https://www.sfu.ca/computing/about.html) | Sept 2012 - June 2016
 
-##### University of British Columbia
-Research Assistant - ECE | July 2015 - July 2016
+##### [University of British Columbia](https://www.ubc.ca)
+[Research Assistant - ECE](https://ece.ubc.ca) | July 2015 - July 2016
 
