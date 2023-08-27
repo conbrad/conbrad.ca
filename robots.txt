@@ -1,1 +1,1 @@
-Sitemap: https://conbrad.github.io/conbrad.ca/sitemap.xml
+Sitemap: https://conbrad.ca/sitemap.xml
