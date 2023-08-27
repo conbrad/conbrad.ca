@@ -18,7 +18,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Conor Brady is a software engineer currently working on predicting wildfire behaviour and mesh networks."
   },
   {
     "objectID": "notes/post-with-code/index.html",
@@ -33,5 +33,19 @@
     "title": "Hello World",
     "section": "",
     "text": "println(\"Hello World\")"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\n\nBC Wildfire - Predictive Services Unit\nFull Stack Developer | March 2021 - present\n\n\nBump\nSenior Software Engineer | December 2022 - present\n\n\nSpare Labs\nSoftware Engineer | August 2019 - July 2020\n\n\nRightMesh\nSoftware Engineer | September 2018 - August 2019\n\n\nScout24\nSoftware Engineer | September 2017 - August 2018\n\n\nVisier\nSoftware Developer | August 2016 - April 2017"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\nSimon Fraser University\nBsc in Computing Science | Sept 2012 - June 2016\n\n\nUniversity of British Columbia\nResearch Assistant - ECE | July 2015 - July 2016"
   }
 ]

@@ -1,8 +1,8 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile.png
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: linkedin
       text: LinkedIn
@@ -13,4 +13,33 @@ about:
 
 ---
 
-About this blog
+Conor Brady is a software engineer currently working on predicting wildfire behaviour and mesh networks.
+
+## Experience
+
+##### BC Wildfire - Predictive Services Unit
+Full Stack Developer | March 2021 - present
+
+##### Bump
+Senior Software Engineer | December 2022 - present
+
+##### Spare Labs
+Software Engineer | August 2019 - July 2020
+
+##### RightMesh
+Software Engineer | September 2018 - August 2019
+
+##### Scout24
+Software Engineer | September 2017 - August 2018
+
+##### Visier
+Software Developer | August 2016 - April 2017
+
+## Education
+
+##### Simon Fraser University 
+Bsc in Computing Science | Sept 2012 - June 2016
+
+##### University of British Columbia
+Research Assistant - ECE | July 2015 - July 2016
+
