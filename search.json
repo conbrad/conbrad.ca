@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "notes/welcome/index.html",
-    "href": "notes/welcome/index.html",
+    "objectID": "notes/hello-world/index.html",
+    "href": "notes/hello-world/index.html",
     "title": "Hello World",
     "section": "",
     "text": "println(\"Hello World\")"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "conbrad.ca",
-    "section": "",
-    "text": "Hello World\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 24, 2023\n\n\nConor Brady\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -19,20 +12,6 @@
     "title": "About",
     "section": "",
     "text": "Conor Brady is a software engineer currently working on predicting wildfire behaviour and mesh networks."
-  },
-  {
-    "objectID": "notes/post-with-code/index.html",
-    "href": "notes/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "notes/hello-world/index.html",
-    "href": "notes/hello-world/index.html",
-    "title": "Hello World",
-    "section": "",
-    "text": "println(\"Hello World\")"
   },
   {
     "objectID": "about.html#experience",
@@ -47,5 +26,12 @@
     "title": "About",
     "section": "Education",
     "text": "Education\n\nSimon Fraser University\nBsc in Computing Science | Sept 2012 - June 2016\n\n\nUniversity of British Columbia\nResearch Assistant - ECE | July 2015 - July 2016"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "conbrad.ca",
+    "section": "",
+    "text": "Hello World\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 24, 2023\n\n\nConor Brady\n\n\n\n\n\n\nNo matching items"
   }
 ]
