@@ -7,7 +7,7 @@ website:
   navbar:
     left:
     - about.qmd 
-    right:
+    tools:
       - icon: github
         href: https://github.com/conbrad
       - icon: linkedin
