@@ -1,16 +1,37 @@
 [
   {
+    "objectID": "notes/welcome/index.html",
+    "href": "notes/welcome/index.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "println(\"Hello World\")"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "conbrad.ca",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Hello World\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 24, 2023\n\n\nConor Brady\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "About this blog"
+  },
+  {
+    "objectID": "notes/post-with-code/index.html",
+    "href": "notes/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "notes/hello-world/index.html",
+    "href": "notes/hello-world/index.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "println(\"Hello World\")"
   }
 ]
