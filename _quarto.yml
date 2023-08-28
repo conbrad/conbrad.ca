@@ -6,7 +6,7 @@ website:
   title: "conbrad.ca"
   site-url: "https://conbrad.ca"
   repo-url: https://github.com/conbrad/conbrad.ca
-  repo-actions: [edit]
+  repo-actions: [edit, issue]
   repo-branch: main
   open-graph: true
   navbar:
@@ -24,12 +24,24 @@ website:
         href: https://github.com/conbrad
       - icon: linkedin
         href: https://www.linkedin.com/in/conorgbrady/
+
+  back-to-top-navigation: true
+
+  page-footer:
+    center:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/conorgbrady/
+      - icon: github
+        href: https://github.com/conbrad
+      - icon: rss
+        href: index.xml
 format:
   html:
-    theme:
-      light: litera
-      dark: darkly
-    css: styles.css
+    reference-location: document
+    theme: [solar]
+    css:
+      - styles.css
+    toc: true
 
 
 

@@ -1,11 +1,21 @@
 ---
+sidebar: false
+description: "A collection of technical blogs and talks on machine learning and data science."
+image: quarto.png
+toc: true
 listing:
-  contents: notes
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
+  date-format: short
+  feed: true
   filter-ui: false
-page-layout: full
-title-block-banner: false
+  type: table
+  sort-ui: false
+  sort: "date desc"
+  categories: false
+  fields: [date, title]
+  id: notes-listings
+  contents: [notes]
+aliases: ["notes/"]
+format:
+  html:
+    anchor-sections: true
 ---
