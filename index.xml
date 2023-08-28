@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>conbrad.ca</title>
+<link>https://conbrad.ca/index.html</link>
+<atom:link href="https://conbrad.ca/index.xml" rel="self" type="application/rss+xml"/>
+<description>A collection of technical blogs and talks on machine learning and data science.</description>
+<image>
+<url>https://conbrad.ca/quarto.png</url>
+<title>conbrad.ca</title>
+<link>https://conbrad.ca/index.html</link>
+</image>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Thu, 24 Aug 2023 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello World</title>
+  <dc:creator>Conor Brady</dc:creator>
+  <link>https://conbrad.ca/notes/hello-world/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="this-is-a-test" class="level3">
+<h3 class="anchored" data-anchor-id="this-is-a-test">This is a test</h3>
+<pre><code>println("Hello World")</code></pre>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>news</category>
+  <guid>https://conbrad.ca/notes/hello-world/index.html</guid>
+  <pubDate>Thu, 24 Aug 2023 07:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

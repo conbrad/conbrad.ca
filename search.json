@@ -4,7 +4,7 @@
     "href": "notes/hello-world/index.html",
     "title": "Hello World",
     "section": "",
-    "text": "println(\"Hello World\")"
+    "text": "This is a test\nprintln(\"Hello World\")\n\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
@@ -32,6 +32,6 @@
     "href": "index.html",
     "title": "conbrad.ca",
     "section": "",
-    "text": "Hello World\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 24, 2023\n\n\nConor Brady\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n8/24/23\n\n\nHello World\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   }
 ]
