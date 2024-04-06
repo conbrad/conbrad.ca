@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://conbrad.ca/notes/hello-world/index.html</loc>
-    <lastmod>2023-11-05T01:50:52.691Z</lastmod>
-  </url>
-  <url>
-    <loc>https://conbrad.ca/about.html</loc>
-    <lastmod>2023-11-05T01:50:48.022Z</lastmod>
-  </url>
-  <url>
     <loc>https://conbrad.ca/index.html</loc>
-    <lastmod>2023-11-05T01:50:46.162Z</lastmod>
+    <lastmod>2024-04-06T00:19:52.854Z</lastmod>
+  </url>
+  <url>
+    <loc>https://conbrad.ca/notes/backprop-recursive-chain-rule/index.html</loc>
+    <lastmod>2024-04-06T00:19:55.171Z</lastmod>
   </url>
 </urlset>

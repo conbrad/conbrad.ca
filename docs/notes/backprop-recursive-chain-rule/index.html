@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A collection of technical blogs and talks on machine learning and data science.">
+<meta name="author" content="Conor Brady">
+<meta name="dcterms.date" content="2024-04-06">
 
-<title>conbrad.ca</title>
+<title>conbrad.ca - Unexpected {Simplicity, Complexity}</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,43 +61,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-notes-listings .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-notes-listings'] = new List('listing-notes-listings', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="conbrad.ca" href="index.xml"><meta property="og:title" content="">
-<meta property="og:description" content="A collection of technical blogs and talks on machine learning and data science.">
-<meta property="og:image" content="https://conbrad.ca/quarto.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="conbrad.ca - Unexpected {Simplicity, Complexity}">
+<meta property="og:description" content="">
 <meta property="og:site-name" content="conbrad.ca">
 </head>
 
@@ -110,11 +79,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
 </ul>
@@ -131,54 +100,93 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unexpected-simplicity" id="toc-unexpected-simplicity" class="nav-link active" data-scroll-target="#unexpected-simplicity">Unexpected Simplicity</a></li>
+  <li><a href="#unexpected-complexity" id="toc-unexpected-complexity" class="nav-link" data-scroll-target="#unexpected-complexity">Unexpected Complexity</a></li>
+  <li><a href="#simple-complex" id="toc-simple-complex" class="nav-link" data-scroll-target="#simple-complex">{Simple, Complex}</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/conbrad/conbrad.ca/edit/main/notes/backprop-recursive-chain-rule/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Unexpected {Simplicity, Complexity}</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ai</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Conor Brady </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 6, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="unexpected-simplicity" class="level2">
+<h2 class="anchored" data-anchor-id="unexpected-simplicity">Unexpected Simplicity</h2>
+<p>The timeline of working through <a href="https://karpathy.ai/">Andrej Karpathy</a>’s <a href="https://karpathy.ai/zero-to-hero.html">Neural Networks: Zero to Hero</a> course presents some early and striking milestones.</p>
+<p>In the first hour of the first class, <a href="https://www.youtube.com/watch?v=VMj-3S1tku0">The spelled-out intro to neural networks and backpropagation: building micrograd</a>, you’re guided through building and manually verifying a single step of backpropagation of a simple mathematical expression. It’s mostly composed of a cute <code>Value</code> class that knows how to add and multiply other <code>Value</code>s, as well as keeping track of it’s child <code>Value</code>s and local gradient.</p>
+<p>You build up an expression of values, visualize it using <a href="https://graphviz.org/"><code>graphviz</code></a>, then step through each <code>Value</code> node recursively computing the derivatives of sentinel node of the expression with respect to each “backwardly” successive child expression, leveraging the chain rule.</p>
+<p>To resurface an intuition for the chain rule, Karpathy pulls up the example on <a href="https://en.wikipedia.org/wiki/Chain_rule">Wikipedia</a> :</p>
+<blockquote class="blockquote">
+<p>As put by George F. Simmons: “If a car travels twice as fast as a bicycle and the bicycle is four times as fast as a walking man, then the car travels 2 × 4 = 8 times as fast as the man.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(z\)</span>, <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> be the (variable) positions of the car, the bicycle, and the walking man, respectively. The rate of change of relative positions of the car and the bicycle is <span class="math inline">\(dz/dy=2\)</span>. Similarly, <span class="math inline">\(dy/dx=4\)</span>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>So, the rate of change of the relative positions of the car and the walking man is</p>
+</blockquote>
+<p><span class="math display">\[
+dz/dx = dz/dy * dy/dx = 2 * 4 =8
+\]</span></p>
+<p>At this point you’ve reconstructed a healthy chunk of the core of <a href="https://github.com/karpathy/micrograd">micrograd</a>, an engine for small neural networks. The ultimate (at the time of writing) codebase is small: <a href="https://github.com/karpathy/micrograd/blob/c911406e5ace8742e5841a7e0df113ecb5d54685/micrograd/engine.py"><code>engine.py</code></a> that is 94 LOC, <a href="https://github.com/karpathy/micrograd/blob/c911406e5ace8742e5841a7e0df113ecb5d54685/micrograd/nn.py"><code>nn.py</code></a> that is 60 LOC.</p>
+<p>Above is a (simplified) description of backpropagation and a python implementation described in 270-odd words. Glibly, one could describe the kernel of neural networks as the recursively applied chain rule through a graph.</p>
+</section>
+<section id="unexpected-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="unexpected-complexity">Unexpected Complexity</h2>
+<p>Note that <a href="https://github.com/karpathy/micrograd"><code>micrograd</code></a> includes in it’s <code>README</code> description of itself as “Potentially useful for educational purposes.”</p>
+<p>Karpathy also notes in the lecture video that a lot of the complexity in making neural network training work is having them run efficiently. He also notes that micrograd eschews tensors as a data structure to favor pedagogy.</p>
+<p>The backpropagation algorithm itself having a recursive structure is subject to efficiency improvement through <a href="https://en.wikipedia.org/wiki/Dynamic_programming">dynamic programming</a>.</p>
+<p>Hardware parallelization techniques such as SIMD that <a href="https://github.com/endorno/pytorch/blob/master/torch/lib/TH/generic/simd/simd.h">PyTorch et al leverage</a> make training a neural network reasonable relative to the time it would take for serial operations to run.</p>
+<p>The LLM neural network inference library, llama.cpp, generates predictions based on context and inputs. While this functionality is tangential to the training of the neural network, it too has a massive iceberg of performance optimizations as noted by <a href="https://justine.lol/matmul/">jart</a> in a recent outline of enhancements including:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Mmap">mmap</a> support for loading weights</li>
+<li>identifying constants for parameters that are never used</li>
+<li>unrolling the right loops to share registers, without stepping on CPU speculation</li>
+</ul>
+</section>
+<section id="simple-complex" class="level2">
+<h2 class="anchored" data-anchor-id="simple-complex">{Simple, Complex}</h2>
+<p>The complexity iceberg meme reigns supreme in the context of neural networks. Much like exposing a simple interface and hiding the complexity behind it, or <a href="https://web.stanford.edu/~ouster/cgi-bin/cs190-winter18/lecture.php?topic=modularDesign">“deep modules”</a> à la John Ousterhout, the unexpected simplicitiy of the initial concepts give way to the unexpected complexity of the implementation.</p>
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-notes-listings">
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="ai" data-listing-date-sort="1712386800000" data-listing-file-modified-sort="1712362652063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Unexpected {Simplicity, Complexity}" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">4/6/24</span>
-</td>
-<td>
-<a href="./notes/backprop-recursive-chain-rule/index.html" class="title listing-title">Unexpected {Simplicity, Complexity}</a>
-</td>
-</tr>
-<tr data-index="1" data-categories="news" data-listing-date-sort="1692860400000" data-listing-file-modified-sort="1699149370393" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Hello World" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">8/24/23</span>
-</td>
-<td>
-<a href="./notes/hello-world/index.html" class="title listing-title">Hello World</a>
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -433,13 +441,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml">
+    <a class="nav-link" href="../../index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
   </li>  
 </ul>
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/conbrad/conbrad.ca/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
