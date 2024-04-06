@@ -40,5 +40,33 @@
     "title": "Unexpected {Simplicity, Complexity}",
     "section": "{Simple, Complex}",
     "text": "{Simple, Complex}\nThe complexity iceberg meme reigns supreme in the context of neural networks. Much like exposing a simple interface and hiding the complexity behind it, or “deep modules” à la John Ousterhout, the unexpected simplicitiy of the initial concepts give way to the unexpected complexity of the implementation."
+  },
+  {
+    "objectID": "notes/hello-world/index.html",
+    "href": "notes/hello-world/index.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "This is a test\nprintln(\"Hello World\")\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Conor Brady is a software engineer currently working on predicting wildfire behaviour and mesh networks."
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\n\nBC Wildfire - Predictive Services Unit\nFull Stack Developer | March 2021 - present\n\n\nBump\nSenior Software Engineer | December 2022 - October 2023\n\n\nSpare Labs\nSoftware Engineer | August 2019 - July 2020\n\n\nRightMesh\nSoftware Engineer | September 2018 - August 2019\n\n\nScout24\nSoftware Engineer | September 2017 - August 2018\n\n\nVisier\nSoftware Developer | August 2016 - April 2017"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\nSimon Fraser University\nBSc in Computing Science | Sept 2012 - June 2016\n\n\nUniversity of British Columbia\nResearch Assistant - ECE | July 2015 - July 2016"
   }
 ]
