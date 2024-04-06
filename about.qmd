@@ -1,0 +1,45 @@
+---
+title: "About"
+image: profile.png
+about:
+  template: trestles
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/conorgbrady/
+    - icon: github
+      text: Github
+      href: https://github.com/conbrad
+
+---
+
+Conor Brady is a software engineer currently working on predicting wildfire behaviour and mesh networks.
+
+## Experience
+
+##### [BC Wildfire - Predictive Services Unit](https://www2.gov.bc.ca/gov/content/safety/wildfire-status)
+Full Stack Developer | March 2021 - present
+
+##### [Bump](https://www.bumpapp.xyz)
+Senior Software Engineer | December 2022 - October 2023
+
+##### [Spare Labs](https://sparelabs.com)
+Software Engineer | August 2019 - July 2020
+
+##### [RightMesh](https://rightmesh.io)
+Software Engineer | September 2018 - August 2019
+
+##### [Scout24](https://www.scout24.com)
+Software Engineer | September 2017 - August 2018
+
+##### [Visier](https://www.visier.com)
+Software Developer | August 2016 - April 2017
+
+## Education
+
+##### [Simon Fraser University](https://www.sfu.ca) 
+[BSc in Computing Science](https://www.sfu.ca/computing/about.html) | Sept 2012 - June 2016
+
+##### [University of British Columbia](https://www.ubc.ca)
+[Research Assistant - ECE](https://ece.ubc.ca) | July 2015 - July 2016
+

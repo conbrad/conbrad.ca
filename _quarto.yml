@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "conbrad.ca"
+  site-url: "https://conbrad.ca"
+  repo-url: https://github.com/conbrad/conbrad.ca
+  repo-actions: [edit, issue]
+  repo-branch: main
+  open-graph: true
+  navbar:
+    title: false
+    background: dark
+    pinned: false
+    collapse: false
+    left:
+    - text: notes
+      href: index.qmd
+    - text: about
+      href: about.qmd 
+    tools:
+      - icon: github
+        href: https://github.com/conbrad
+      - icon: linkedin
+        href: https://www.linkedin.com/in/conorgbrady/
+
+  back-to-top-navigation: true
+
+  page-footer:
+    center:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/conorgbrady/
+      - icon: github
+        href: https://github.com/conbrad
+      - icon: rss
+        href: index.xml
+format:
+  html:
+    reference-location: document
+    theme: [solar]
+    css:
+      - styles.css
+    toc: true
+
+
+
