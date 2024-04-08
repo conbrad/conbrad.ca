@@ -1,0 +1,15 @@
+---
+title: "single neuron"
+author: "Conor Brady"
+date: "2024-04-06"
+categories: [ai]
+---
+
+
+## Notes
+- bias of neuron is constrained via a non-linear function like `tanh`
+- topo sort to backpropagate gradients through graph
+- guard to promote prim number to `Value` as well as using `r` variants of `mul` and `add` to make things easier 
+- redefine divison as `self * other**-1`
+- redefine subtraction as addition of a negation
+- negation is multiplying by -1
