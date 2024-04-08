@@ -13,3 +13,10 @@ categories: [ai]
 - redefine divison as `self * other**-1`
 - redefine subtraction as addition of a negation
 - negation is multiplying by -1
+- tensors are n-dimensional arrays of scalars
+- loss function is single value measuring performance
+    - use mse or abs, just need to discard the possible negative sign
+
+- forward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount
+- backward pass: recompute gradients of topo sort
+- continue above until loss is minimal
