@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Conor Brady">
-<meta name="dcterms.date" content="2024-04-06">
+<meta name="dcterms.date" content="2024-04-09">
 
 <title>conbrad.ca - Basic Neural Network</title>
 <style>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 6, 2024</p>
+      <p class="date">April 9, 2024</p>
     </div>
   </div>
   
@@ -195,18 +195,18 @@ ul.task-list li input[type="checkbox"] {
 <li>sum up weights and bias for each neuron</li>
 <li>apply activation function to sum of weights, which clamps extremes
 <ul>
-<li>this is why <code>tan h</code> is used</li>
+<li>this is why <a href="https://mathworld.wolfram.com/HyperbolicTangent.html">hyperbolic tangent</a> is used</li>
 </ul></li>
 </ul>
 <section id="gradient-descent" class="level4">
 <h4 class="anchored" data-anchor-id="gradient-descent">gradient descent</h4>
 <ul>
-<li>gradient (that we calculate with <code>Value</code> class) is a vector that is pointing in the direction of increased loss
+<li>gradient (that we calculate with <a href="https://github.com/karpathy/micrograd/blob/c911406e5ace8742e5841a7e0df113ecb5d54685/micrograd/engine.py#L2"><code>Value</code></a> class) is a vector that is pointing in the direction of increased loss
 <ul>
 <li>the derivative or gradient of this neuron is negative</li>
 <li>if the data value goes lower, we increase the loss</li>
 <li>to minimize the loss, we need to “point” in the opposite direction of the gradient vector, so we nudge the data value by a negative of its gradient</li>
-<li>modifiying <code>p.data</code> with a small step size in the direction of the gradient</li>
+<li>modifiying each neuron’s data with a small step size in the direction of the gradient</li>
 <li>then we iterate this process until loss is minimized (to some definition of minimized)</li>
 </ul></li>
 </ul>
