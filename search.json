@@ -7,6 +7,41 @@
     "text": "This is a test\nprintln(\"Hello World\")\n\n\n\n\n Back to top"
   },
   {
+    "objectID": "notes/backprop-recursive-chain-rule/index.html",
+    "href": "notes/backprop-recursive-chain-rule/index.html",
+    "title": "Unexpected {Simplicity, Complexity}",
+    "section": "",
+    "text": "The timeline of working through Andrej Karpathy’s Neural Networks: Zero to Hero course presents some early and striking milestones.\nIn the first hour of the first class, The spelled-out intro to neural networks and backpropagation: building micrograd, you’re guided through building and manually verifying a single step of backpropagation of a simple mathematical expression. It’s mostly composed of a cute Value class that knows how to add and multiply other Values, as well as keeping track of it’s child Values and local gradient.\nYou build up an expression of values, visualize it using graphviz, then step through each Value node recursively computing the derivatives of sentinel node of the expression with respect to each “backwardly” successive child expression, leveraging the chain rule.\nTo resurface an intuition for the chain rule, Karpathy pulls up the example on Wikipedia :\n\nAs put by George F. Simmons: “If a car travels twice as fast as a bicycle and the bicycle is four times as fast as a walking man, then the car travels 2 × 4 = 8 times as fast as the man.\n\n\nLet \\(z\\), \\(y\\) and \\(x\\) be the (variable) positions of the car, the bicycle, and the walking man, respectively. The rate of change of relative positions of the car and the bicycle is \\(dz/dy=2\\). Similarly, \\(dy/dx=4\\).\n\n\nSo, the rate of change of the relative positions of the car and the walking man is\n\n\\[\ndz/dx = dz/dy * dy/dx = 2 * 4 =8\n\\]\nAt this point you’ve reconstructed a healthy chunk of the core of micrograd, an engine for small neural networks. The ultimate (at the time of writing) codebase is small: engine.py that is 94 LOC, nn.py that is 60 LOC.\nAbove is a (simplified) description of backpropagation and a python implementation described in 270-odd words. Glibly, one could describe the kernel of neural networks as the recursively applied chain rule through a graph."
+  },
+  {
+    "objectID": "notes/backprop-recursive-chain-rule/index.html#unexpected-simplicity",
+    "href": "notes/backprop-recursive-chain-rule/index.html#unexpected-simplicity",
+    "title": "Unexpected {Simplicity, Complexity}",
+    "section": "",
+    "text": "The timeline of working through Andrej Karpathy’s Neural Networks: Zero to Hero course presents some early and striking milestones.\nIn the first hour of the first class, The spelled-out intro to neural networks and backpropagation: building micrograd, you’re guided through building and manually verifying a single step of backpropagation of a simple mathematical expression. It’s mostly composed of a cute Value class that knows how to add and multiply other Values, as well as keeping track of it’s child Values and local gradient.\nYou build up an expression of values, visualize it using graphviz, then step through each Value node recursively computing the derivatives of sentinel node of the expression with respect to each “backwardly” successive child expression, leveraging the chain rule.\nTo resurface an intuition for the chain rule, Karpathy pulls up the example on Wikipedia :\n\nAs put by George F. Simmons: “If a car travels twice as fast as a bicycle and the bicycle is four times as fast as a walking man, then the car travels 2 × 4 = 8 times as fast as the man.\n\n\nLet \\(z\\), \\(y\\) and \\(x\\) be the (variable) positions of the car, the bicycle, and the walking man, respectively. The rate of change of relative positions of the car and the bicycle is \\(dz/dy=2\\). Similarly, \\(dy/dx=4\\).\n\n\nSo, the rate of change of the relative positions of the car and the walking man is\n\n\\[\ndz/dx = dz/dy * dy/dx = 2 * 4 =8\n\\]\nAt this point you’ve reconstructed a healthy chunk of the core of micrograd, an engine for small neural networks. The ultimate (at the time of writing) codebase is small: engine.py that is 94 LOC, nn.py that is 60 LOC.\nAbove is a (simplified) description of backpropagation and a python implementation described in 270-odd words. Glibly, one could describe the kernel of neural networks as the recursively applied chain rule through a graph."
+  },
+  {
+    "objectID": "notes/backprop-recursive-chain-rule/index.html#unexpected-complexity",
+    "href": "notes/backprop-recursive-chain-rule/index.html#unexpected-complexity",
+    "title": "Unexpected {Simplicity, Complexity}",
+    "section": "Unexpected Complexity",
+    "text": "Unexpected Complexity\nNote that micrograd includes in it’s README description of itself as “Potentially useful for educational purposes.”\nKarpathy also notes in the lecture video that a lot of the complexity in making neural network training work is having them run efficiently. He also notes that micrograd eschews tensors as a data structure to favor pedagogy.\nThe backpropagation algorithm itself having a recursive structure is subject to efficiency improvement through dynamic programming.\nHardware parallelization techniques such as SIMD that PyTorch et al leverage make training a neural network reasonable relative to the time it would take for serial operations to run.\nThe LLM neural network inference library, llama.cpp, generates predictions based on context and inputs. While this functionality is tangential to the training of the neural network, it too has a massive iceberg of performance optimizations as noted by jart in a recent outline of enhancements including:\n\nmmap support for loading weights\nidentifying constants for parameters that are never used\nunrolling the right loops to share registers, without stepping on CPU speculation"
+  },
+  {
+    "objectID": "notes/backprop-recursive-chain-rule/index.html#simple-complex",
+    "href": "notes/backprop-recursive-chain-rule/index.html#simple-complex",
+    "title": "Unexpected {Simplicity, Complexity}",
+    "section": "{Simple, Complex}",
+    "text": "{Simple, Complex}\nThe complexity iceberg meme reigns supreme in the context of neural networks. Much like exposing a simple interface and hiding the complexity behind it, or “deep modules” à la John Ousterhout, the unexpected simplicitiy of the initial concepts give way to the unexpected complexity of the implementation."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "conbrad.ca",
+    "section": "",
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n4/9/24\n\n\nBasic Neural Network\n\n\n\n\n4/6/24\n\n\nUnexpected {Simplicity, Complexity}\n\n\n\n\n8/24/23\n\n\nHello World\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -28,10 +63,10 @@
     "text": "Education\n\nSimon Fraser University\nBSc in Computing Science | Sept 2012 - June 2016\n\n\nUniversity of British Columbia\nResearch Assistant - ECE | July 2015 - July 2016"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "conbrad.ca",
+    "objectID": "notes/basic-neural-network/index.html",
+    "href": "notes/basic-neural-network/index.html",
+    "title": "Basic Neural Network",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n8/24/23\n\n\nHello World\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Neural Network\n\n\n\nFig 1. Neural Network, source: https://cs231n.github.io/assets/nn1/neural_net2.jpeg\n\n\n\nspecific class of mathematical expressions\n\ntake inputs as data, the weights, mathematical expression for the forward pass (neurons doing their local calc followed by their output), followed by a loss function, where loss function tries to measure accuracy of the predictions\nusually loss will be low when predictions are matching your targets\nwe backward the loss; use backprop to get the gradient, then we know how to tune all the parameters to decrease the loss locally\niterate the above many times using gradient descent\nsimply follow the gradient info and that minimized the loss\n\nstructure\n\ncomposes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer\nfinally maps outputs from 2nd last layer to output layer with single neuron\n\n\n\nforward pass: neurons compute their local state and output using the activation function\n\n\nbackward pass: use gradient descent to nudge values\n\n\nmeasure loss: check computed loss function to see if loss is minimized\n\n\n\nNeuron\n\n\n\nFig 2. Neuron, source: https://cs231n.github.io/assets/nn1/neuron_model.jpeg\n\n\n\nsum up weights and bias for each neuron\napply activation function to sum of weights, which clamps extremes\n\nthis is why hyperbolic tangent is used\n\n\n\ngradient descent\n\ngradient (that we calculate with Value class) is a vector that is pointing in the direction of increased loss\n\nthe derivative or gradient of this neuron is negative\nif the data value goes lower, we increase the loss\nto minimize the loss, we need to “point” in the opposite direction of the gradient vector, so we nudge the data value by a negative of its gradient\nmodifiying each neuron’s data with a small step size in the direction of the gradient\nthen we iterate this process until loss is minimized (to some definition of minimized)\n\n\n\n\n\n\n\n Back to top"
   }
 ]

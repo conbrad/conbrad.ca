@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://conbrad.ca/notes/hello-world/index.html</loc>
-    <lastmod>2023-11-05T01:58:12.197Z</lastmod>
+    <lastmod>2024-04-09T18:39:44.174Z</lastmod>
   </url>
   <url>
-    <loc>https://conbrad.ca/about.html</loc>
-    <lastmod>2023-11-05T01:58:11.499Z</lastmod>
+    <loc>https://conbrad.ca/notes/backprop-recursive-chain-rule/index.html</loc>
+    <lastmod>2024-04-09T18:39:44.174Z</lastmod>
   </url>
   <url>
     <loc>https://conbrad.ca/index.html</loc>
-    <lastmod>2023-11-05T01:58:11.888Z</lastmod>
+    <lastmod>2024-04-09T20:56:39.150Z</lastmod>
+  </url>
+  <url>
+    <loc>https://conbrad.ca/about.html</loc>
+    <lastmod>2024-04-09T18:39:44.168Z</lastmod>
+  </url>
+  <url>
+    <loc>https://conbrad.ca/notes/basic-neural-network/index.html</loc>
+    <lastmod>2024-04-09T21:03:34.953Z</lastmod>
   </url>
 </urlset>

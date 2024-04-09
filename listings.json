@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/notes/basic-neural-network/index.html",
+      "/notes/backprop-recursive-chain-rule/index.html",
       "/notes/hello-world/index.html"
     ]
   }

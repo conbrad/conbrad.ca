@@ -6,26 +6,159 @@
       version="2.0">
 <channel>
 <title>conbrad.ca</title>
-<link>https://conbrad.ca/index.html</link>
+<link>https://conbrad.ca/</link>
 <atom:link href="https://conbrad.ca/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of technical blogs and talks on machine learning and data science.</description>
 <image>
 <url>https://conbrad.ca/quarto.png</url>
 <title>conbrad.ca</title>
-<link>https://conbrad.ca/index.html</link>
+<link>https://conbrad.ca/</link>
 </image>
-<generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 24 Aug 2023 07:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.553</generator>
+<lastBuildDate>Tue, 09 Apr 2024 07:00:00 GMT</lastBuildDate>
 <item>
-  <title>Hello World</title>
+  <title>Basic Neural Network</title>
   <dc:creator>Conor Brady</dc:creator>
-  <link>https://conbrad.ca/notes/hello-world/index.html</link>
+  <link>https://conbrad.ca/notes/basic-neural-network/</link>
   <description><![CDATA[ 
 
 
 
+
+<section id="neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="neural-network">Neural Network</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://conbrad.ca/notes/basic-neural-network/neural_net2.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fig 1. Neural Network, source: https://cs231n.github.io/assets/nn1/neural_net2.jpeg</figcaption>
+</figure>
+</div>
+<ul>
+<li>specific class of mathematical expressions
+<ul>
+<li>take inputs as data, the weights, mathematical expression for the forward pass (neurons doing their local calc followed by their output), followed by a loss function, where loss function tries to measure accuracy of the predictions</li>
+<li>usually loss will be low when predictions are matching your targets</li>
+<li>we backward the loss; use backprop to get the gradient, then we know how to tune all the parameters to decrease the loss locally</li>
+<li>iterate the above many times using gradient descent</li>
+<li>simply follow the gradient info and that minimized the loss</li>
+</ul></li>
+<li>structure
+<ul>
+<li>composes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer</li>
+<li>finally maps outputs from 2nd last layer to output layer with single neuron</li>
+</ul></li>
+</ul>
+<section id="forward-pass-neurons-compute-their-local-state-and-output-using-the-activation-function" class="level5">
+<h5 class="anchored" data-anchor-id="forward-pass-neurons-compute-their-local-state-and-output-using-the-activation-function">forward pass: neurons compute their local state and output using the activation function</h5>
+</section>
+<section id="backward-pass-use-gradient-descent-to-nudge-values" class="level5">
+<h5 class="anchored" data-anchor-id="backward-pass-use-gradient-descent-to-nudge-values">backward pass: use gradient descent to nudge values</h5>
+</section>
+<section id="measure-loss-check-computed-loss-function-to-see-if-loss-is-minimized" class="level5">
+<h5 class="anchored" data-anchor-id="measure-loss-check-computed-loss-function-to-see-if-loss-is-minimized">measure loss: check computed loss function to see if loss is minimized</h5>
+</section>
+</section>
+<section id="neuron" class="level3">
+<h3 class="anchored" data-anchor-id="neuron">Neuron</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://conbrad.ca/notes/basic-neural-network/neuron_model.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fig 2. Neuron, source: https://cs231n.github.io/assets/nn1/neuron_model.jpeg</figcaption>
+</figure>
+</div>
+<ul>
+<li>sum up weights and bias for each neuron</li>
+<li>apply activation function to sum of weights, which clamps extremes
+<ul>
+<li>this is why <a href="https://mathworld.wolfram.com/HyperbolicTangent.html">hyperbolic tangent</a> is used</li>
+</ul></li>
+</ul>
+<section id="gradient-descent" class="level4">
+<h4 class="anchored" data-anchor-id="gradient-descent">gradient descent</h4>
+<ul>
+<li>gradient (that we calculate with <a href="https://github.com/karpathy/micrograd/blob/c911406e5ace8742e5841a7e0df113ecb5d54685/micrograd/engine.py#L2"><code>Value</code></a> class) is a vector that is pointing in the direction of increased loss
+<ul>
+<li>the derivative or gradient of this neuron is negative</li>
+<li>if the data value goes lower, we increase the loss</li>
+<li>to minimize the loss, we need to “point” in the opposite direction of the gradient vector, so we nudge the data value by a negative of its gradient</li>
+<li>modifiying each neuron’s data with a small step size in the direction of the gradient</li>
+<li>then we iterate this process until loss is minimized (to some definition of minimized)</li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <guid>https://conbrad.ca/notes/basic-neural-network/</guid>
+  <pubDate>Tue, 09 Apr 2024 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Unexpected {Simplicity, Complexity}</title>
+  <dc:creator>Conor Brady</dc:creator>
+  <link>https://conbrad.ca/notes/backprop-recursive-chain-rule/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="unexpected-simplicity" class="level2">
+<h2 class="anchored" data-anchor-id="unexpected-simplicity">Unexpected Simplicity</h2>
+<p>The timeline of working through <a href="https://karpathy.ai/">Andrej Karpathy</a>’s <a href="https://karpathy.ai/zero-to-hero.html">Neural Networks: Zero to Hero</a> course presents some early and striking milestones.</p>
+<p>In the first hour of the first class, <a href="https://www.youtube.com/watch?v=VMj-3S1tku0">The spelled-out intro to neural networks and backpropagation: building micrograd</a>, you’re guided through building and manually verifying a single step of backpropagation of a simple mathematical expression. It’s mostly composed of a cute <code>Value</code> class that knows how to add and multiply other <code>Value</code>s, as well as keeping track of it’s child <code>Value</code>s and local gradient.</p>
+<p>You build up an expression of values, visualize it using <a href="https://graphviz.org/"><code>graphviz</code></a>, then step through each <code>Value</code> node recursively computing the derivatives of sentinel node of the expression with respect to each “backwardly” successive child expression, leveraging the chain rule.</p>
+<p>To resurface an intuition for the chain rule, Karpathy pulls up the example on <a href="https://en.wikipedia.org/wiki/Chain_rule">Wikipedia</a> :</p>
+<blockquote class="blockquote">
+<p>As put by George F. Simmons: “If a car travels twice as fast as a bicycle and the bicycle is four times as fast as a walking man, then the car travels 2 × 4 = 8 times as fast as the man.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Let <img src="https://latex.codecogs.com/png.latex?z">, <img src="https://latex.codecogs.com/png.latex?y"> and <img src="https://latex.codecogs.com/png.latex?x"> be the (variable) positions of the car, the bicycle, and the walking man, respectively. The rate of change of relative positions of the car and the bicycle is <img src="https://latex.codecogs.com/png.latex?dz/dy=2">. Similarly, <img src="https://latex.codecogs.com/png.latex?dy/dx=4">.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>So, the rate of change of the relative positions of the car and the walking man is</p>
+</blockquote>
+<p><img src="https://latex.codecogs.com/png.latex?%0Adz/dx%20=%20dz/dy%20*%20dy/dx%20=%202%20*%204%20=8%0A"></p>
+<p>At this point you’ve reconstructed a healthy chunk of the core of <a href="https://github.com/karpathy/micrograd">micrograd</a>, an engine for small neural networks. The ultimate (at the time of writing) codebase is small: <a href="https://github.com/karpathy/micrograd/blob/c911406e5ace8742e5841a7e0df113ecb5d54685/micrograd/engine.py"><code>engine.py</code></a> that is 94 LOC, <a href="https://github.com/karpathy/micrograd/blob/c911406e5ace8742e5841a7e0df113ecb5d54685/micrograd/nn.py"><code>nn.py</code></a> that is 60 LOC.</p>
+<p>Above is a (simplified) description of backpropagation and a python implementation described in 270-odd words. Glibly, one could describe the kernel of neural networks as the recursively applied chain rule through a graph.</p>
+</section>
+<section id="unexpected-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="unexpected-complexity">Unexpected Complexity</h2>
+<p>Note that <a href="https://github.com/karpathy/micrograd"><code>micrograd</code></a> includes in it’s <code>README</code> description of itself as “Potentially useful for educational purposes.”</p>
+<p>Karpathy also notes in the lecture video that a lot of the complexity in making neural network training work is having them run efficiently. He also notes that micrograd eschews tensors as a data structure to favor pedagogy.</p>
+<p>The backpropagation algorithm itself having a recursive structure is subject to efficiency improvement through <a href="https://en.wikipedia.org/wiki/Dynamic_programming">dynamic programming</a>.</p>
+<p>Hardware parallelization techniques such as SIMD that <a href="https://github.com/endorno/pytorch/blob/master/torch/lib/TH/generic/simd/simd.h">PyTorch et al leverage</a> make training a neural network reasonable relative to the time it would take for serial operations to run.</p>
+<p>The LLM neural network inference library, llama.cpp, generates predictions based on context and inputs. While this functionality is tangential to the training of the neural network, it too has a massive iceberg of performance optimizations as noted by <a href="https://justine.lol/matmul/">jart</a> in a recent outline of enhancements including:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Mmap">mmap</a> support for loading weights</li>
+<li>identifying constants for parameters that are never used</li>
+<li>unrolling the right loops to share registers, without stepping on CPU speculation</li>
+</ul>
+</section>
+<section id="simple-complex" class="level2">
+<h2 class="anchored" data-anchor-id="simple-complex">{Simple, Complex}</h2>
+<p>The complexity iceberg meme reigns supreme in the context of neural networks. Much like exposing a simple interface and hiding the complexity behind it, or <a href="https://web.stanford.edu/~ouster/cgi-bin/cs190-winter18/lecture.php?topic=modularDesign">“deep modules”</a> à la John Ousterhout, the unexpected simplicitiy of the initial concepts give way to the unexpected complexity of the implementation.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <guid>https://conbrad.ca/notes/backprop-recursive-chain-rule/</guid>
+  <pubDate>Sat, 06 Apr 2024 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Hello World</title>
+  <dc:creator>Conor Brady</dc:creator>
+  <link>https://conbrad.ca/notes/hello-world/</link>
+  <description><![CDATA[ 
+
+
+
+
 <section id="this-is-a-test" class="level3">
-<h3 class="anchored" data-anchor-id="this-is-a-test">This is a test</h3>
+
 <pre><code>println("Hello World")</code></pre>
 
 
@@ -33,7 +166,7 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>news</category>
-  <guid>https://conbrad.ca/notes/hello-world/index.html</guid>
+  <guid>https://conbrad.ca/notes/hello-world/</guid>
   <pubDate>Thu, 24 Aug 2023 07:00:00 GMT</pubDate>
 </item>
 </channel>
