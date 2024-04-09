@@ -20,3 +20,17 @@ categories: [ai]
 - forward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount
 - backward pass: recompute gradients of topo sort
 - continue above until loss is minimal
+
+### Neural Network
+![Fig 1. Neural Network](neural_net2.jpeg)
+
+- composes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer
+- finally maps outputs from 2nd last layer to output layer with single neuron
+
+### Neuron
+![Fig 2. Neuron](neuron_model.jpeg)
+
+- sum up weights and bias for each neuron
+- apply activation function to sum of weights, which clamps extremes
+    - this is why `tan h` is used
+

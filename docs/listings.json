@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/notes/backprop-recursive-chain-rule/index.html",
+      "/notes/single-neuron/index.html",
       "/notes/hello-world/index.html"
     ]
   }

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Conor Brady">
-<meta name="dcterms.date" content="2023-08-24">
+<meta name="dcterms.date" content="2024-04-06">
 
-<title>conbrad.ca - Hello World</title>
+<title>conbrad.ca - single neuron</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="conbrad.ca - Hello World">
+<meta property="og:title" content="conbrad.ca - single neuron">
 <meta property="og:site_name" content="conbrad.ca">
 </head>
 
@@ -108,18 +108,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-is-a-test" id="toc-this-is-a-test" class="nav-link active" data-scroll-target="#this-is-a-test">This is a test</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes">Notes</a>
+  <ul class="collapse">
+  <li><a href="#neural-network" id="toc-neural-network" class="nav-link" data-scroll-target="#neural-network">Neural Network</a></li>
+  <li><a href="#neuron" id="toc-neuron" class="nav-link" data-scroll-target="#neuron">Neuron</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/conbrad/conbrad.ca/edit/main/notes/hello-world/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/conbrad/conbrad.ca/edit/main/notes/single-neuron/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hello World</h1>
+<h1 class="title">single neuron</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">news</div>
+    <div class="quarto-category">ai</div>
   </div>
   </div>
 
@@ -137,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 24, 2023</p>
+      <p class="date">April 6, 2024</p>
     </div>
   </div>
   
@@ -149,11 +153,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="this-is-a-test" class="level3">
-<h3 class="anchored" data-anchor-id="this-is-a-test">This is a test</h3>
-<pre><code>println("Hello World")</code></pre>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ul>
+<li>bias of neuron is constrained via a non-linear function like <code>tanh</code></li>
+<li>topo sort to backpropagate gradients through graph</li>
+<li>guard to promote prim number to <code>Value</code> as well as using <code>r</code> variants of <code>mul</code> and <code>add</code> to make things easier</li>
+<li>redefine divison as <code>self * other**-1</code></li>
+<li>redefine subtraction as addition of a negation</li>
+<li>negation is multiplying by -1</li>
+<li>tensors are n-dimensional arrays of scalars</li>
+<li>loss function is single value measuring performance
+<ul>
+<li>use mse or abs, just need to discard the possible negative sign</li>
+</ul></li>
+<li>forward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount</li>
+<li>backward pass: recompute gradients of topo sort</li>
+<li>continue above until loss is minimal</li>
+</ul>
+<section id="neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="neural-network">Neural Network</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="neural_net2.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fig 1. Neural Network</figcaption>
+</figure>
+</div>
+<ul>
+<li>composes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer</li>
+<li>finally maps outputs from 2nd last layer to output layer with single neuron</li>
+</ul>
+</section>
+<section id="neuron" class="level3">
+<h3 class="anchored" data-anchor-id="neuron">Neuron</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="neuron_model.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fig 2. Neuron</figcaption>
+</figure>
+</div>
+<ul>
+<li>sum up weights and bias for each neuron</li>
+<li>apply activation function to sum of weights, which clamps extremes
+<ul>
+<li>this is why <code>tan h</code> is used</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -593,7 +641,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/conbrad/conbrad.ca/edit/main/notes/hello-world/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/conbrad/conbrad.ca/edit/main/notes/single-neuron/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

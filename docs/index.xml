@@ -6,21 +6,22 @@
       version="2.0">
 <channel>
 <title>conbrad.ca</title>
-<link>https://conbrad.ca/index.html</link>
+<link>https://conbrad.ca/</link>
 <atom:link href="https://conbrad.ca/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of technical blogs and talks on machine learning and data science.</description>
 <image>
 <url>https://conbrad.ca/quarto.png</url>
 <title>conbrad.ca</title>
-<link>https://conbrad.ca/index.html</link>
+<link>https://conbrad.ca/</link>
 </image>
-<generator>quarto-1.3.450</generator>
+<generator>quarto-1.4.553</generator>
 <lastBuildDate>Sat, 06 Apr 2024 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Unexpected {Simplicity, Complexity}</title>
   <dc:creator>Conor Brady</dc:creator>
-  <link>https://conbrad.ca/notes/backprop-recursive-chain-rule/index.html</link>
+  <link>https://conbrad.ca/notes/backprop-recursive-chain-rule/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -65,19 +66,62 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://conbrad.ca/notes/backprop-recursive-chain-rule/index.html</guid>
+  <guid>https://conbrad.ca/notes/backprop-recursive-chain-rule/</guid>
+  <pubDate>Sat, 06 Apr 2024 07:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>single neuron</title>
+  <dc:creator>Conor Brady</dc:creator>
+  <link>https://conbrad.ca/notes/single-neuron/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ul>
+<li>bias of neuron is constrained via a non-linear function like <code>tanh</code></li>
+<li>topo sort to backpropagate gradients through graph</li>
+<li>guard to promote prim number to <code>Value</code> as well as using <code>r</code> variants of <code>mul</code> and <code>add</code> to make things easier</li>
+<li>redefine divison as <code>self * other**-1</code></li>
+<li>redefine subtraction as addition of a negation</li>
+<li>negation is multiplying by -1</li>
+<li>tensors are n-dimensional arrays of scalars</li>
+<li>loss function is single value measuring performance
+<ul>
+<li>use mse or abs, just need to discard the possible negative sign</li>
+</ul></li>
+<li>forward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount</li>
+<li>backward pass: recompute gradients of topo sort</li>
+<li>continue above until loss is minimal</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://conbrad.ca/notes/single-neuron/neural_net2.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Neural Network</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <guid>https://conbrad.ca/notes/single-neuron/</guid>
   <pubDate>Sat, 06 Apr 2024 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Hello World</title>
   <dc:creator>Conor Brady</dc:creator>
-  <link>https://conbrad.ca/notes/hello-world/index.html</link>
+  <link>https://conbrad.ca/notes/hello-world/</link>
   <description><![CDATA[ 
 
 
 
+
 <section id="this-is-a-test" class="level3">
-<h3 class="anchored" data-anchor-id="this-is-a-test">This is a test</h3>
+
 <pre><code>println("Hello World")</code></pre>
 
 
@@ -85,7 +129,7 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>news</category>
-  <guid>https://conbrad.ca/notes/hello-world/index.html</guid>
+  <guid>https://conbrad.ca/notes/hello-world/</guid>
   <pubDate>Thu, 24 Aug 2023 07:00:00 GMT</pubDate>
 </item>
 </channel>

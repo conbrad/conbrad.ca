@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "conbrad.ca",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n4/6/24\n\n\nUnexpected {Simplicity, Complexity}\n\n\n\n\n8/24/23\n\n\nHello World\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\n4/6/24\n\n\nUnexpected {Simplicity, Complexity}\n\n\n\n\n4/6/24\n\n\nsingle neuron\n\n\n\n\n8/24/23\n\n\nHello World\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "notes/backprop-recursive-chain-rule/index.html",
@@ -40,5 +40,26 @@
     "title": "Unexpected {Simplicity, Complexity}",
     "section": "{Simple, Complex}",
     "text": "{Simple, Complex}\nThe complexity iceberg meme reigns supreme in the context of neural networks. Much like exposing a simple interface and hiding the complexity behind it, or “deep modules” à la John Ousterhout, the unexpected simplicitiy of the initial concepts give way to the unexpected complexity of the implementation."
+  },
+  {
+    "objectID": "notes/single-neuron/index.html",
+    "href": "notes/single-neuron/index.html",
+    "title": "single neuron",
+    "section": "",
+    "text": "bias of neuron is constrained via a non-linear function like tanh\ntopo sort to backpropagate gradients through graph\nguard to promote prim number to Value as well as using r variants of mul and add to make things easier\nredefine divison as self * other**-1\nredefine subtraction as addition of a negation\nnegation is multiplying by -1\ntensors are n-dimensional arrays of scalars\nloss function is single value measuring performance\n\nuse mse or abs, just need to discard the possible negative sign\n\nforward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount\nbackward pass: recompute gradients of topo sort\ncontinue above until loss is minimal\n\n\n\n\n\n\nFig 1. Neural Network\n\n\n\ncomposes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer\nfinally maps outputs from 2nd last layer to output layer with single neuron\n\n\n\n\n\n\n\nFig 2. Neuron\n\n\n\nsum up weights and bias for each neuron\napply activation function to sum of weights, which clamps extremes\n\nthis is why tan h is used"
+  },
+  {
+    "objectID": "notes/single-neuron/index.html#notes",
+    "href": "notes/single-neuron/index.html#notes",
+    "title": "single neuron",
+    "section": "",
+    "text": "bias of neuron is constrained via a non-linear function like tanh\ntopo sort to backpropagate gradients through graph\nguard to promote prim number to Value as well as using r variants of mul and add to make things easier\nredefine divison as self * other**-1\nredefine subtraction as addition of a negation\nnegation is multiplying by -1\ntensors are n-dimensional arrays of scalars\nloss function is single value measuring performance\n\nuse mse or abs, just need to discard the possible negative sign\n\nforward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount\nbackward pass: recompute gradients of topo sort\ncontinue above until loss is minimal\n\n\n\n\n\n\nFig 1. Neural Network\n\n\n\ncomposes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer\nfinally maps outputs from 2nd last layer to output layer with single neuron\n\n\n\n\n\n\n\nFig 2. Neuron\n\n\n\nsum up weights and bias for each neuron\napply activation function to sum of weights, which clamps extremes\n\nthis is why tan h is used"
+  },
+  {
+    "objectID": "notes/hello-world/index.html",
+    "href": "notes/hello-world/index.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "This is a test\nprintln(\"Hello World\")\n\n\n\n\n Back to top"
   }
 ]
