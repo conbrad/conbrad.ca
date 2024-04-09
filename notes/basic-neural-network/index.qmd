@@ -1,0 +1,41 @@
+---
+title: "Basic Neural Network"
+author: "Conor Brady"
+date: "2024-04-06"
+categories: [ai]
+---
+
+### Neural Network
+![Fig 1. Neural Network, source: https://cs231n.github.io/assets/nn1/neural_net2.jpeg](neural_net2.jpeg)
+
+- specific class of mathematical expressions
+    - take inputs as data, the weights, mathematical expression for the forward pass (neurons doing their local calc followed by their output), followed by a loss function, where loss function tries to measure accuracy of the predictions
+    - usually loss will be low when predictions are matching 
+    your targets
+    - we backward the loss; use backprop to get the gradient, then we know how to tune all the parameters to decrease the loss locally
+    - iterate the above many times using gradient descent
+    - simply follow the gradient info and that minimized the loss
+
+- structure
+    - composes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer
+    - finally maps outputs from 2nd last layer to output layer with single neuron
+
+##### forward pass: neurons compute their local state and output using the activation function
+##### backward pass: use gradient descent to nudge values
+##### measure loss: check computed loss function to see if loss is minimized
+
+### Neuron
+![Fig 2. Neuron, source: https://cs231n.github.io/assets/nn1/neuron_model.jpeg](neuron_model.jpeg)
+
+- sum up weights and bias for each neuron
+- apply activation function to sum of weights, which clamps extremes
+    - this is why `tan h` is used
+
+#### gradient descent
+- gradient (that we calculate with `Value` class) is a vector that is pointing in the direction of increased loss
+    - the derivative or gradient of this neuron is negative
+    - if the data value goes lower, we increase the loss
+    - to minimize the loss, we need to "point" in the opposite direction of the gradient vector, so we nudge the data value by a negative of its gradient
+    - modifiying `p.data` with a small step size in the direction of the gradient
+    - then we iterate this process until loss is minimized (to some definition of minimized)
+

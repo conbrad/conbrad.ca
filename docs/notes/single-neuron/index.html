@@ -9,7 +9,7 @@
 <meta name="author" content="Conor Brady">
 <meta name="dcterms.date" content="2024-04-06">
 
-<title>conbrad.ca - single neuron</title>
+<title>conbrad.ca - Basic Neural Network</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="conbrad.ca - single neuron">
+<meta property="og:title" content="conbrad.ca - Basic Neural Network">
 <meta property="og:site_name" content="conbrad.ca">
 </head>
 
@@ -108,11 +108,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes">Notes</a>
-  <ul class="collapse">
-  <li><a href="#neural-network" id="toc-neural-network" class="nav-link" data-scroll-target="#neural-network">Neural Network</a></li>
+  <li><a href="#neural-network" id="toc-neural-network" class="nav-link active" data-scroll-target="#neural-network">Neural Network</a></li>
   <li><a href="#neuron" id="toc-neuron" class="nav-link" data-scroll-target="#neuron">Neuron</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/conbrad/conbrad.ca/edit/main/notes/single-neuron/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/conbrad/conbrad.ca/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -121,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">single neuron</h1>
+<h1 class="title">Basic Neural Network</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ai</div>
   </div>
@@ -153,43 +150,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<ul>
-<li>bias of neuron is constrained via a non-linear function like <code>tanh</code></li>
-<li>topo sort to backpropagate gradients through graph</li>
-<li>guard to promote prim number to <code>Value</code> as well as using <code>r</code> variants of <code>mul</code> and <code>add</code> to make things easier</li>
-<li>redefine divison as <code>self * other**-1</code></li>
-<li>redefine subtraction as addition of a negation</li>
-<li>negation is multiplying by -1</li>
-<li>tensors are n-dimensional arrays of scalars</li>
-<li>loss function is single value measuring performance
-<ul>
-<li>use mse or abs, just need to discard the possible negative sign</li>
-</ul></li>
-<li>forward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount</li>
-<li>backward pass: recompute gradients of topo sort</li>
-<li>continue above until loss is minimal</li>
-</ul>
 <section id="neural-network" class="level3">
 <h3 class="anchored" data-anchor-id="neural-network">Neural Network</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="neural_net2.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Fig 1. Neural Network</figcaption>
+<figcaption>Fig 1. Neural Network, source: https://cs231n.github.io/assets/nn1/neural_net2.jpeg</figcaption>
 </figure>
 </div>
 <ul>
+<li>specific class of mathematical expressions
+<ul>
+<li>take inputs as data, the weights, mathematical expression for the forward pass (neurons doing their local calc followed by their output), followed by a loss function, where loss function tries to measure accuracy of the predictions</li>
+<li>usually loss will be low when predictions are matching your targets</li>
+<li>we backward the loss; use backprop to get the gradient, then we know how to tune all the parameters to decrease the loss locally</li>
+<li>iterate the above many times using gradient descent</li>
+<li>simply follow the gradient info and that minimized the loss</li>
+</ul></li>
+<li>structure
+<ul>
 <li>composes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer</li>
 <li>finally maps outputs from 2nd last layer to output layer with single neuron</li>
+</ul></li>
 </ul>
+<section id="forward-pass-neurons-compute-their-local-state-and-output-using-the-activation-function" class="level5">
+<h5 class="anchored" data-anchor-id="forward-pass-neurons-compute-their-local-state-and-output-using-the-activation-function">forward pass: neurons compute their local state and output using the activation function</h5>
+</section>
+<section id="backward-pass-use-gradient-descent-to-nudge-values" class="level5">
+<h5 class="anchored" data-anchor-id="backward-pass-use-gradient-descent-to-nudge-values">backward pass: use gradient descent to nudge values</h5>
+</section>
+<section id="measure-loss-check-computed-loss-function-to-see-if-loss-is-minimized" class="level5">
+<h5 class="anchored" data-anchor-id="measure-loss-check-computed-loss-function-to-see-if-loss-is-minimized">measure loss: check computed loss function to see if loss is minimized</h5>
+</section>
 </section>
 <section id="neuron" class="level3">
 <h3 class="anchored" data-anchor-id="neuron">Neuron</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="neuron_model.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Fig 2. Neuron</figcaption>
+<figcaption>Fig 2. Neuron, source: https://cs231n.github.io/assets/nn1/neuron_model.jpeg</figcaption>
 </figure>
 </div>
 <ul>
@@ -197,6 +196,18 @@ ul.task-list li input[type="checkbox"] {
 <li>apply activation function to sum of weights, which clamps extremes
 <ul>
 <li>this is why <code>tan h</code> is used</li>
+</ul></li>
+</ul>
+<section id="gradient-descent" class="level4">
+<h4 class="anchored" data-anchor-id="gradient-descent">gradient descent</h4>
+<ul>
+<li>gradient (that we calculate with <code>Value</code> class) is a vector that is pointing in the direction of increased loss
+<ul>
+<li>the derivative or gradient of this neuron is negative</li>
+<li>if the data value goes lower, we increase the loss</li>
+<li>to minimize the loss, we need to “point” in the opposite direction of the gradient vector, so we nudge the data value by a negative of its gradient</li>
+<li>modifiying <code>p.data</code> with a small step size in the direction of the gradient</li>
+<li>then we iterate this process until loss is minimized (to some definition of minimized)</li>
 </ul></li>
 </ul>
 

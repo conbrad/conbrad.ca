@@ -70,45 +70,82 @@
   <pubDate>Sat, 06 Apr 2024 07:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>single neuron</title>
+  <title>Basic Neural Network</title>
   <dc:creator>Conor Brady</dc:creator>
-  <link>https://conbrad.ca/notes/single-neuron/</link>
+  <link>https://conbrad.ca/notes/basic-neural-network/</link>
   <description><![CDATA[ 
 
 
 
 
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<ul>
-<li>bias of neuron is constrained via a non-linear function like <code>tanh</code></li>
-<li>topo sort to backpropagate gradients through graph</li>
-<li>guard to promote prim number to <code>Value</code> as well as using <code>r</code> variants of <code>mul</code> and <code>add</code> to make things easier</li>
-<li>redefine divison as <code>self * other**-1</code></li>
-<li>redefine subtraction as addition of a negation</li>
-<li>negation is multiplying by -1</li>
-<li>tensors are n-dimensional arrays of scalars</li>
-<li>loss function is single value measuring performance
-<ul>
-<li>use mse or abs, just need to discard the possible negative sign</li>
-</ul></li>
-<li>forward pass: for each layer in mlp, for each neuron in layer, for each parameter in neuron, nudge gradient by small amount</li>
-<li>backward pass: recompute gradients of topo sort</li>
-<li>continue above until loss is minimal</li>
-</ul>
+<section id="neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="neural-network">Neural Network</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://conbrad.ca/notes/single-neuron/neural_net2.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Neural Network</figcaption>
+<p><img src="https://conbrad.ca/notes/basic-neural-network/neural_net2.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fig 1. Neural Network, source: https://cs231n.github.io/assets/nn1/neural_net2.jpeg</figcaption>
 </figure>
 </div>
+<ul>
+<li>specific class of mathematical expressions
+<ul>
+<li>take inputs as data, the weights, mathematical expression for the forward pass (neurons doing their local calc followed by their output), followed by a loss function, where loss function tries to measure accuracy of the predictions</li>
+<li>usually loss will be low when predictions are matching your targets</li>
+<li>we backward the loss; use backprop to get the gradient, then we know how to tune all the parameters to decrease the loss locally</li>
+<li>iterate the above many times using gradient descent</li>
+<li>simply follow the gradient info and that minimized the loss</li>
+</ul></li>
+<li>structure
+<ul>
+<li>composes layers of neurons, layers compose neurons, and tie outputs from one layer to the next layer</li>
+<li>finally maps outputs from 2nd last layer to output layer with single neuron</li>
+</ul></li>
+</ul>
+<section id="forward-pass-neurons-compute-their-local-state-and-output-using-the-activation-function" class="level5">
+<h5 class="anchored" data-anchor-id="forward-pass-neurons-compute-their-local-state-and-output-using-the-activation-function">forward pass: neurons compute their local state and output using the activation function</h5>
+</section>
+<section id="backward-pass-use-gradient-descent-to-nudge-values" class="level5">
+<h5 class="anchored" data-anchor-id="backward-pass-use-gradient-descent-to-nudge-values">backward pass: use gradient descent to nudge values</h5>
+</section>
+<section id="measure-loss-check-computed-loss-function-to-see-if-loss-is-minimized" class="level5">
+<h5 class="anchored" data-anchor-id="measure-loss-check-computed-loss-function-to-see-if-loss-is-minimized">measure loss: check computed loss function to see if loss is minimized</h5>
+</section>
+</section>
+<section id="neuron" class="level3">
+<h3 class="anchored" data-anchor-id="neuron">Neuron</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://conbrad.ca/notes/basic-neural-network/neuron_model.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fig 2. Neuron, source: https://cs231n.github.io/assets/nn1/neuron_model.jpeg</figcaption>
+</figure>
+</div>
+<ul>
+<li>sum up weights and bias for each neuron</li>
+<li>apply activation function to sum of weights, which clamps extremes
+<ul>
+<li>this is why <code>tan h</code> is used</li>
+</ul></li>
+</ul>
+<section id="gradient-descent" class="level4">
+<h4 class="anchored" data-anchor-id="gradient-descent">gradient descent</h4>
+<ul>
+<li>gradient (that we calculate with <code>Value</code> class) is a vector that is pointing in the direction of increased loss
+<ul>
+<li>the derivative or gradient of this neuron is negative</li>
+<li>if the data value goes lower, we increase the loss</li>
+<li>to minimize the loss, we need to “point” in the opposite direction of the gradient vector, so we nudge the data value by a negative of its gradient</li>
+<li>modifiying <code>p.data</code> with a small step size in the direction of the gradient</li>
+<li>then we iterate this process until loss is minimized (to some definition of minimized)</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://conbrad.ca/notes/single-neuron/</guid>
+  <guid>https://conbrad.ca/notes/basic-neural-network/</guid>
   <pubDate>Sat, 06 Apr 2024 07:00:00 GMT</pubDate>
 </item>
 <item>
